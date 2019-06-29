@@ -17,5 +17,13 @@ $(function () {
     //4秒後に表示する
     topbtn.fadeIn(4000);
 
+    //戻るボタンをおしたら上に戻るアニメーションを追加する
+    topbtn.click(function (event) {
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0
+        },2000);
+    });
+
 
 })
